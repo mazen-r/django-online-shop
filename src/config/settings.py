@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'cart.apps.CartConfig',
     'order.apps.OrderConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +145,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_HOST_PASSWORD = env_variables['EMAIL_HOST_PASSWORD']
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
+
+# Stripe settings
+STRIPE_PUBLISHABLE_KEY = env_variables['STRIPE_PUBLISHABLE_KEY'] # Publishable key
+STRIPE_SECRET_KEY = env_variables['STRIPE_SECRET_KEY'] # Secret key
+STRIPE_API_VERSION = '2022-08-01'
