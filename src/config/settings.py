@@ -137,15 +137,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CART_SESSION_ID = 'cart'
 
-# Turn the following setting on if you want to use consolse for emails
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# # Turn the following setting on if you want to use consolse for emails
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Email server configuration
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = env_variables['EMAIL_HOST_USER']
-# EMAIL_HOST_PASSWORD = env_variables['EMAIL_HOST_PASSWORD']
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = env_variables['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = env_variables['EMAIL_HOST_PASSWORD']
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Stripe settings
 STRIPE_PUBLISHABLE_KEY = env_variables['STRIPE_PUBLISHABLE_KEY'] # Publishable key
@@ -156,3 +156,6 @@ STRIPE_API_VERSION = '2022-08-01'
 REDIS_HOST = env_variables['REDIS_HOST']
 REDIS_PORT = env_variables['REDIS_PORT']
 REDIS_DB = env_variables['REDIS_DB']
+
+## Broker settings.
+CELERY_BROKER_URL = 'amqp://guest:guest@rabbitmq:5672//'
