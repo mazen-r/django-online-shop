@@ -158,4 +158,4 @@ REDIS_PORT = env_variables['REDIS_PORT']
 REDIS_DB = env_variables['REDIS_DB']
 
 ## Broker settings.
-CELERY_BROKER_URL = 'amqp://guest:guest@rabbitmq:5672//'
+CELERY_BROKER_URL = env_variables['CELERY_BROKER_URL']
